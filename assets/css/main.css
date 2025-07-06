@@ -29,7 +29,7 @@
   /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff;
   /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffffe7;
   /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #3a3939;
   /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -237,10 +237,10 @@ h6 {
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-   /* --background-color: rgba(211, 208, 208, 0.26);  */
-  --background-color: transparent; 
+  /* --background-color: rgba(211, 208, 208, 0.26);  */
+  --background-color: transparent;
   --heading-color: #ffffff;
-  --nav-color: rgba(236, 232, 232, 0.849);
+  --nav-color: rgba(255, 255, 255, 0.952);
   --nav-hover-color: #ffffff;
 }
 
@@ -253,11 +253,11 @@ h6 {
   --nav-hover-color: #e84545;
 }
 
-  /* Brand sub on Scroll
+/* Brand sub on Scroll
   ------------------------------*/
-  .scrolled .header .brand-sub {
-    color: #e84545;
-  }
+.scrolled .header .brand-sub {
+  color: #e84545;
+}
 
 /*Page Header on Scroll
 ------------------------------*/
@@ -341,14 +341,31 @@ h6 {
     visibility: hidden;
     opacity: 0;
     transition: 0.3s;
-    border-radius: 4px;
+    border-radius: 8px;
     z-index: 9997;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
 
-  .navmenu .dropdown ul li {
-    min-width: 600px;
+  /* .navmenu .dropdown ul li {
+    min-width: 300px;
+  } */
+
+  .navmenu .dropdown .services-menu>li,
+  .navmenu .dropdown.dropdown-menu>li {
+    display: block;
+    /*vertical list */
+    /* width: fit-content;     or auto */
+    /* white-space: nowrap;    prevent line wrap */
+    /* padding: 8px 12px; */
   }
+
+  .navmenu .dropdown-menu ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+    opacity: 0.8;
+    backdrop-filter: blur(4px);
+
+  }
+
 
   .navmenu .dropdown ul a {
     padding: 10px 20px;
@@ -365,12 +382,13 @@ h6 {
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
     color: var(--nav-dropdown-hover-color);
+    opacity: 0.8;
   }
 
   .navmenu .dropdown:hover>ul {
     opacity: 1;
     top: 80%;
-    left: -110%;
+    /* left: -110%; */
     visibility: visible;
   }
 
@@ -815,7 +833,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  /* position: relative; */
+  position: relative;
   padding: 0;
   min-height: 110vh;
   display: flex;
@@ -842,6 +860,123 @@ section,
   object-fit: cover;
   z-index: 1;
 }
+
+.hero-overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  max-width: 100vw;
+  overflow: hidden;
+  animation: fadeIn 1.5s ease-in-out;
+  white-space: nowrap;
+  /* Prevents text from wrapping to the next line */
+  background: none !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+
+}
+
+.hero-overlay-text h1 {
+  background: transparent !important;
+  color: rgb(211, 91, 91);
+  font-size: clamp(3.5rem, 6vw, 4rem);
+  font-family: "dancing script", cursive;
+  font-weight: 800;
+  margin: 0;
+  white-space: nowrap;
+  /* Again here, on the heading */
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #f700ff,
+    0 0 30px #f700ff,
+    0 0 40px #f700ff,
+    0 0 55px #f700ff,
+    0 0 70px #f700ff;
+}
+
+.hero-overlay-font {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+ .tagline-container {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100vw; 
+  height: 100vw;
+  z-index: 3;
+  pointer-events: none;
+} 
+
+ .tagline-container h1 {
+   position: absolute;
+  font-family: "Newreader", serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-style: italic;
+  letter-spacing: 1px; /* ✅ Techier feel */
+  margin: 0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(30%);  
+  animation: fadeIn 1.5s ease-in-out forwards;
+  z-index: 3;
+}   
+
+
+
+/* Top-left (Cyan glow) */
+.top-left {
+  top: 15%;
+  left: 30%;
+  color: #f9f8fa;
+   text-shadow:
+    0 0 5px #fff,
+    0 0 10px #565757,
+    0 0 20px #656666,
+    0 0 40px #1f2020; 
+}
+
+/* Bottom-right (Magenta glow) */
+ .bottom-right {
+   bottom: 60%; 
+  right: -10%;
+  color: #0f0f0f;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+} 
+
+
+/* Optional fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
 
 /* .direct-hire img{
   margin-top: 20%;

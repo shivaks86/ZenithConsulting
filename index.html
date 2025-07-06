@@ -18,9 +18,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tenali+Ramakrishna&family=SourceSans&display=swap"
     rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,100..900;1,100..900&display=swap"  rel="stylesheet">   
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,48 +48,48 @@
       <a href="index.html" class=" brand-box logo d-flex me-auto me-xl-0">
         <img src="assets/img/Zenith_Logo_bg-HD.png" alt="">
         <div class="logo-text">
-        <span class="brand-main">Zenith Impact</span>
+          <span class="brand-main">Zenith Impact</span>
         </div>
         <span class="brand-sub">Solutions</span>
-        </a>
-    <div class="nav-wrapper">
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <!-- <li><a href="index.html#hero" class="active">Home</a></li> -->
-          <li class="active dropdown"><a href="#"><span>Our Services</span>
-              <span class="ml-1">
-                <i class="fas fa-chevron-down text-xs"></i>
-              </span>
-            </a>
-            <ul>
+      </a>
+      <div class="nav-wrapper">
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class="active">Home</a></li>
+            <li class="active dropdown"><a href="#"><span>Our Services</span>
+                <span class="ml-1">
+                  <i class="fas fa-chevron-down text-xs"></i>
+                </span>
+              </a>
+              <ul class="services-menu align-items-center">
 
-              <li><a href="#">Direct Hire</a></li>
-              <li><a href="#">Contingent Hire</a></li>
-              <li><a href="#">Staff Agumentation</a></li>
-              <li><a href="#">Managed Services</a></li>
-            </ul>
-          </li>
-          <li class="active dropdown"><a href="#"><span>Who We Are</span>
-              <span class="ml-1">
-                <i class="fas fa-chevron-down text-xs"></i>
-              </span>
-            </a>
-            <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact US</a></li>
-            </ul>
-          </li>
-        </ul>
-
-
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                <li><a href="#">Direct Hire</a></li>
+                <li><a href="#">Contingent Hire</a></li>
+                <li><a href="#">Staff Agumentation</a></li>
+                <li><a href="#">Managed Services</a></li>
+              </ul>
+            </li>
+            <li class="active dropdown"><a href="#"><span>Who We Are</span>
+                <span class="ml-1">
+                  <i class="fas fa-chevron-down text-xs"></i>
+                </span>
+              </a>
+              <ul class="dropdown-menu align-items-center">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact US</a></li>
+              </ul>
+            </li>
+          </ul>
 
 
-      </nav>
-      <a class="btn-connect" href="index.html#about">Connect Now</a>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 
 
-    </div><!-- Nav Wrapper -->
+        </nav>
+        <a class="btn-connect" href="index.html#about">Connect Now</a>
+
+
+      </div><!-- Nav Wrapper -->
     </div>
   </header>
 
@@ -95,12 +100,27 @@
     <!-- <section id="hero" class="hero section dark-background"> -->
     <section id="hero" class="hero section dark-background">
       <!-- <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in"> -->
-       <!-- <img class="hero-image" src="assets/img/coming-soon.png">  -->
+      <!-- <img class="hero-image" src="assets/img/coming-soon.png">  -->
       <!-- Background Video -->
-       <video autoplay muted loop playinline>
-        <source src="assets/video/hero_vid.mov" type="video/mp4">
+      <video id="heroVideo" autoplay muted loop playinline preload="auto">
+        <source src="assets/video/hero_vid.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video> 
+      </video>
+
+      <div class="tagline-container">
+        <h1 class="top-left">Unlocking Human Potential.</h1>
+        <h1 class="bottom-right">Driving Business Impact.</h1>
+      </div>
+      <!-- <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 col-md-10 text-center" data-aos="fade-up" data-aos-delay="100">
+            <h2>Empowering Your Workforce for Tomorrow</h2>
+            <p>We are a digital talent solutions company that specializes in delivering digital and IT talent services,
+              including direct hires, career advisement, global remote talent solutions, and talent development
+              programs designed to build diverse and future-ready workforces.</p>
+            <a href="#services" class="btn-get-started">Explore Our Services</a>
+          </div>
+        </div> -->
     </section>
 
     <!-- Our Service Section -->
@@ -163,7 +183,7 @@
 
     </section><!-- /Services Section -->
 
-      <!-- Call To Action Section -->
+    <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section dark-background">
 
       <img src="assets/img/cta-bg.jpg" alt="">
@@ -225,8 +245,8 @@
                       <div>
                         <h3>Ramya S</h3>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
@@ -249,8 +269,9 @@
                         <h3>Sara Wilsson</h3>
                         <h4>Designer</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
@@ -273,8 +294,9 @@
                         <h3>Jenny S</h3>
                         <h4>Senior Developer</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
@@ -296,8 +318,9 @@
                         <h3>Madan Kishore</h3>
                         <h4>Quality Analyst</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
@@ -320,8 +343,9 @@
                         <h3>Vijay Sagar</h3>
                         <h4>Data Engineer</h4>
                         <div class="stars">
-                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
                         </div>
                       </div>
                     </div>
@@ -378,7 +402,7 @@
         </div>
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-            <p><strong>Email:</strong> <span>connect@zenithimpactsolutions.com</span></p>
+          <p><strong>Email:</strong> <span>connect@zenithimpactsolutions.com</span></p>
         </div>
 
       </div>
